@@ -73,8 +73,13 @@
             },
             success:function(backdata){
                 console.log(backdata);
+                if(backdata.status==0){
+                    window.location.href="/student/studentlist";
+                }
                 alert(backdata.message)
+                
                 $("#vcodeimg").attr('src','/account/vcode?id='+Math.random())
+
             }
         })
     }
